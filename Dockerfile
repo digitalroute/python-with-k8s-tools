@@ -1,5 +1,7 @@
 FROM python:3
 
+LABEL version="1.0.0"
+
 USER root
 
 RUN cd /tmp && \
