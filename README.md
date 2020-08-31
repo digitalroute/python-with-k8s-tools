@@ -19,10 +19,15 @@ python:3
 
 # Building Image
 
-The docker hub image are automatically built through the GitHub and Docker Hub integration
-https://docs.docker.com/docker-hub/builds/
-
 Manually build for local testing
 
 - docker build -t python-with-k8s-tools .
 
+Manually push to DigitalRoute Docker Hub
+
+- docker build -t digitalroute/python-with-k8s-tools:<version> .
+- docker push digitalroute/python-with-k8s-tools:<version>
+
+# Run Image
+
+- docker run -it --rm --privileged digitalroute/python-with-k8s-tools:<version> bash
