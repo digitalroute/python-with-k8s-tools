@@ -25,6 +25,7 @@ Manually build for local testing
 
 Manually push to DigitalRoute Docker Hub
 
+- docker login
 - docker build -t digitalroute/python-with-k8s-tools:<version> .
 - docker push digitalroute/python-with-k8s-tools:<version>
 
