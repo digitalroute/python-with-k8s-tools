@@ -1,6 +1,6 @@
 FROM python:3
 
-LABEL version="1.0.2"
+LABEL version="1.0.3"
 
 USER root
 
@@ -45,7 +45,7 @@ RUN cd /tmp && \
 RUN mkdir -p /root/.ssh && \
     echo 'Host *\n    StrictHostKeyChecking no' > ~/.ssh/config && \
     chmod 600 -R /root/.ssh && \
-    pip --no-cache-dir install jira pyyaml jirachlog atlassian-python-api slackclient requests
+    pip --no-cache-dir install jira pyyaml jirachlog atlassian-python-api slackclient requests boto3
 
 WORKDIR /tmp
 
