@@ -1,6 +1,6 @@
 FROM python:3
 
-LABEL version="1.0.3"
+LABEL version="1.0.4"
 
 USER root
 
@@ -43,6 +43,7 @@ RUN cd /tmp && \
     mv kubectl /usr/local/bin
 
 RUN mkdir -p /root/.ssh && \
+    chmod 777 /etc/passwd && \
     echo 'Host *\n    StrictHostKeyChecking no' > ~/.ssh/config && \
     chmod 600 -R /root/.ssh && \
     pip --no-cache-dir install jira pyyaml jirachlog atlassian-python-api slackclient requests boto3
